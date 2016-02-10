@@ -1,0 +1,18 @@
+@mixin placeholder()
+  input::-webkit-input-placeholder
+    @content
+  input:-moz-placeholder
+    @content
+  input::-moz-placeholder
+    @content
+  input:-ms-input-placeholder
+    @content
+    
+.type-style
+  font-size: 15px
+  font-family: sans-serif
+  letter-spacing: 1px
+    
+@include placeholder()
+  padding: 0px 20px
+  @extend .type-style
